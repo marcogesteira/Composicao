@@ -1,5 +1,6 @@
 ﻿using ExercicioComposicao.Entities.Enums;
 using System.Text;
+using System.Globalization;
 
 namespace ExercicioComposicao.Entities
 {
@@ -49,7 +50,7 @@ namespace ExercicioComposicao.Entities
             {
                 sb.AppendLine(item.ToString());
             }
-            sb.AppendLine("Total price: " + Total().ToString());
+            sb.AppendLine("Total price: $" + Total().ToString("F2", CultureInfo.InvariantCulture));
 
             return sb.ToString();
         }

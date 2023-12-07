@@ -25,9 +25,9 @@ namespace ExercicioComposicao
             Console.Write("How many items to this order? ");
             int n = int.Parse(Console.ReadLine());
 
-            Order order = new Order(client,DateTime.Now,status);
+            Order order = new Order(client, DateTime.Now, status);
 
-            for (int i = 1;i <= n;i++)
+            for (int i = 1; i <= n; i++)
             {
                 Console.WriteLine($"Enter #{i} item data:");
                 Console.Write("Product name: ");
@@ -36,8 +36,9 @@ namespace ExercicioComposicao
                 double prodPrice = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                 Console.Write("Quantity: ");
                 int prodQty = int.Parse(Console.ReadLine());
-                Product prod = new Product(prodName,prodPrice);
-                OrderItem orderItem = new OrderItem(prod, prodQty,prodPrice);
+                
+                Product prod = new Product(prodName, prodPrice);
+                OrderItem orderItem = new OrderItem(prod, prodQty, prodPrice);
                 order.AddItem(orderItem);
             }
             Console.WriteLine();

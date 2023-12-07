@@ -26,7 +26,7 @@ namespace ExercicioComposicao.Entities
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append(Product.Name + ", $" + Product.Price + ", Quantity: " + Quantity + ", Subtotal: $" + SubTotal().ToString("F2", CultureInfo.InvariantCulture));
+            sb.Append(Product.Name + ", $" + Product.Price.ToString("F2", CultureInfo.InvariantCulture) + ", Quantity: " + Quantity + ", Subtotal: $" + SubTotal().ToString("F2", CultureInfo.InvariantCulture));
             return sb.ToString();
         }
     }
